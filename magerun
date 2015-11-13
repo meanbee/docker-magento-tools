@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/n98-magerun.phar --root-dir=$MAGE_ROOT_DIR $@

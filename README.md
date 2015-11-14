@@ -13,7 +13,7 @@ Tools included:
 
 Required environment variables for commands in this container include:
 
-- MAGE_ROOT_DIR (magerun & magebm)
+- MAGE_ROOT_DIR (magerun, magedbm and mageconfigsync)
 - AWS_ACCESS_KEY_ID (magedbm)
 - AWS_SECRET_ACCESS_KEY (magedbm)
 - AWS_REGION (magedbm)

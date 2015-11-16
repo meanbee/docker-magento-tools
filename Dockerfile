@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y mysql-client
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/ --filename=composer
 
-# Download magedbm, magerun and mageconfigsync
+# Download composer, magedbm, magerun and mageconfigsync
 RUN curl https://getcomposer.org/composer.phar -o /composer.phar & \
     curl https://s3-eu-west-1.amazonaws.com/magedbm-releases/magedbm.phar -o /magedbm.phar & \
     curl http://files.magerun.net/n98-magerun-latest.phar -o /n98-magerun.phar & \

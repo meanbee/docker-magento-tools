@@ -25,7 +25,7 @@ COPY composer /usr/local/bin/
 COPY magerun /usr/local/bin/
 COPY magedbm /usr/local/bin/
 COPY mageconfigsync /usr/local/bin/
-COPY modman /usr/local/bin
+COPY modman /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/magerun

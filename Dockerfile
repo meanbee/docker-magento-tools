@@ -2,7 +2,9 @@ FROM meanbee/magento:5.6-cli
 
 MAINTAINER Tom Robertshaw <tom.robertshaw@meanbee.com>
 
-RUN apt-get update && apt-get install -y mysql-client
+RUN apt-get update && apt-get install -y mysql-client git
+
+RUN docker-php-ext-install zip
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/ --filename=composer
 

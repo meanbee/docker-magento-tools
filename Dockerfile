@@ -6,8 +6,6 @@ RUN apt-get update && apt-get install -y mysql-client git
 
 RUN docker-php-ext-install zip
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/ --filename=composer
-
 # Download composer, magedbm, magerun and mageconfigsync
 RUN curl https://getcomposer.org/composer.phar -o /composer.phar & \
     curl https://s3-eu-west-1.amazonaws.com/magedbm-releases/magedbm.phar -o /magedbm.phar & \

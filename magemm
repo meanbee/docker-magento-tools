@@ -1,0 +1,7 @@
+#!/bin/bash
+
+aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+aws configure set default.region $AWS_REGION
+
+aws s3 sync --delete s3://$AWS_MEDIA_BUCKET/$1/media/ $MAGE_ROOT_DIR/media/

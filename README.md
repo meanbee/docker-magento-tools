@@ -8,6 +8,7 @@ Tools included:
 - [n98-magerun](https://github.com/netz98/n98-magerun)
 - [magedbm](https://github.com/meanbee/magedbm)
 - [mageconfigsync](https://github.com/punkstar/mageconfigsync)
+- magemm - copies media from S3 backup.
 
 #Usage
 
@@ -18,6 +19,7 @@ Required environment variables for commands in this container include:
 - `AWS_SECRET_ACCESS_KEY` (magedbm)
 - `AWS_REGION` (magedbm)
 - `AWS_BUCKET` (magedbm)
+- `AWS_MEDIA_BUCKET` (magemm)
 
 The container also requires access to your Magento files, and access to the MySQL container.
 
@@ -33,6 +35,7 @@ Assuming you have a data container called `data` which contains your files that 
         AWS_SECRET_ACCESS_KEY: replaceme
         AWS_REGION: eu-west-1
         AWS_BUCKET: magedbm
+        AWS_MEDIA_BUCKET: magemm
       links:
         - db
       volumes_from:
@@ -42,3 +45,4 @@ This image can then be used to easily perform any command, for example:
 
     docker-compose run magento-tools magerun sys:config:list
     docker-compose run magento-tools magedbm get clientname
+    docker-compose run magento-tools magemm clientname

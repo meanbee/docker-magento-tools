@@ -2,7 +2,7 @@ FROM meanbee/magento:5.6-cli
 
 MAINTAINER Tom Robertshaw <tom.robertshaw@meanbee.com>
 
-RUN apt-get update && apt-get install -y git groff mysql-client python-pip
+RUN apt-get update && apt-get install -y git groff mysql-client python-pip sudo
 
 RUN docker-php-ext-install zip
 

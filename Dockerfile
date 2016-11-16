@@ -36,10 +36,3 @@ RUN chmod +x /usr/local/bin/magedbm
 RUN chmod +x /usr/local/bin/magemm
 RUN chmod +x /usr/local/bin/mageconfigsync
 RUN chmod +x /usr/local/bin/modman
-
-## Frontend Tools
-RUN curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
-RUN apt-get install --yes nodejs
-
-RUN npm install -g grunt-cli
-RUN npm install -g gulp
